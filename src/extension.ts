@@ -3,6 +3,7 @@
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 import * as copyPaste  from 'copy-paste';
+import * as path from 'path';
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -23,16 +24,13 @@ export function activate(context: vscode.ExtensionContext) {
         let filename = editor.document.fileName;
 
         // Extract and return directory path
-        if (filename.includes("\\")) {
-            let dirPath = filename.substring(0, filename.lastIndexOf('\\'));
+        if (filename.includes(path.sep)) {
+            let dirPath = path.dirname(filename);
             copyPaste.copy(dirPath, () => vscode.window.showInformationMessage(`Directory path "${dirPath}" has been copied to clipboard`));
         } else {
             vscode.window.showErrorMessage(`Could not parse path in "${filename}"!`)
         }
     });
-
-    
-    
 
     context.subscriptions.push(disposable);
 }

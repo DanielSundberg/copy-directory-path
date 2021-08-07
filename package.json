@@ -2,7 +2,7 @@
     "name": "copy-directory-path",
     "displayName": "copy-directory-path",
     "description": "Copies path of directory to clipboard",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "daniels",
     "repository": "https://github.com/DanielSundberg/copy-directory-path",
     "engines": {
