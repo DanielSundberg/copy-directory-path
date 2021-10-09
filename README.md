@@ -14,7 +14,12 @@ Like *Current Dir. path to clipboard* in _Notepad++_.
 
 ## Known Issues
 
+
 ## Release Notes
+
+### 1.0.2
+On Linux, display error message if xclip is not found
+
 
 ### 1.0.1
 Fix #1, support for non-windows os 
