@@ -13,6 +13,11 @@ Like *Current Dir. path to clipboard* in _Notepad++_.
 
 
 ## Known Issues
+On Debian (Ubuntu) the _xclip_ package is not installed by default.
+
+To fix, run
+
+`sudo apt install xclip`
 
 
 ## Release Notes
